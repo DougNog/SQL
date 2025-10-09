@@ -1,4 +1,4 @@
--- Geração de Modelo físico
+-- Geraï¿½ï¿½o de Modelo fï¿½sico
 -- Sql ANSI 2003 - brModelo.
 
 
@@ -25,7 +25,7 @@ CREATE TABLE Clientes (
 Nome_Cliente varchar(100),
 email varchar(100),
 Telefone varchar(100),
-CPF int Auto_Increment PRIMARY KEY,
+CPF varchar(11) PRIMARY KEY,
 Data_Nascimento date
 )
 
@@ -46,9 +46,9 @@ Titulo varchar(100),
 codigo_venda int Auto_Increment PRIMARY KEY,
 Quantidade int,
 Valor_Total varchar(100),
-CPF int Auto_Increment,
-Codigo_Livro int Auto_Increment,
-FOREIGN KEY(CPF) REFERENCES Clientes (CPF)/*falha: chave estrangeira*/
+CPF varchar(11),
+Codigo_Livro int,
+FOREIGN KEY(CPF) REFERENCES Clientes (CPF)
 )
 
 ALTER TABLE Autores ADD FOREIGN KEY(Codigo_Livro) REFERENCES Livros (Codigo_Livro)
