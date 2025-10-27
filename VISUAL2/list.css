@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;900&family=Poppins:wght@300;600&display=swap');
+
+/* ===========================
+   ⚡ ESTILO FUTURISTA NEON ⚡
+   =========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #060618, #01010a 80%);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 60px;
+  overflow-x: hidden;
+}
+
+/* --- Título --- */
+h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffff;
+  text-shadow: 0 0 25px #00ffff, 0 0 50px #0077ff;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  font-size: 28px;
+  animation: glowTitle 3s ease-in-out infinite alternate;
+}
+@keyframes glowTitle {
+  0% { text-shadow: 0 0 10px #00ffff; }
+  100% { text-shadow: 0 0 30px #00ffff, 0 0 70px #0077ff; }
+}
+
+/* --- Tabela Neon --- */
+table {
+  width: 85%;
+  border-collapse: collapse;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 0 40px rgba(0,255,255,0.3), inset 0 0 10px rgba(0,255,255,0.1);
+  overflow: hidden;
+  background: rgba(10, 20, 40, 0.8);
+  animation: floatTable 6s ease-in-out infinite alternate;
+}
+@keyframes floatTable {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-10px); }
+}
+
+/* Cabeçalho da tabela */
+th {
+  padding: 15px;
+  text-transform: uppercase;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #000;
+  background: linear-gradient(90deg, #00ffff, #0077ff);
+  border-bottom: 2px solid rgba(0, 255, 255, 0.4);
+  text-shadow: 0 0 5px #00ffff;
+}
+
+/* Linhas da tabela */
+td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0,255,255,0.2);
+  transition: background 0.3s, transform 0.3s;
+}
+
+tr:nth-child(even) {
+  background: rgba(0, 255, 255, 0.03);
+}
+
+tr:hover {
+  background: rgba(0, 255, 255, 0.1);
+  transform: scale(1.01);
+  box-shadow: 0 0 15px rgba(0,255,255,0.3);
+}
+
+/* --- Links Editar --- */
+a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px #00ffff;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #fff;
+  text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+}
+
+/* --- Scrollbar estilizada --- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00ffff, #0077ff);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #060618;
+}
+
+/* --- Responsivo --- */
+@media (max-width: 768px) {
+  table {
+    width: 95%;
+    font-size: 13px;
+  }
+  th, td {
+    padding: 10px;
+  }
+}
