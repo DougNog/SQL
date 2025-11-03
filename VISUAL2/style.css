@@ -1,0 +1,163 @@
+/* === O CSS MAIS FODA DO MUNDO === */
+/* Design: Douglas Nogueira & ChatGPT 2099 Edition ⚡ */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle at top, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+/* --- Animação de fundo --- */
+body::before {
+  content: '';
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 255, 255, 0.1) 0,
+    rgba(0, 255, 255, 0.1) 2px,
+    transparent 2px,
+    transparent 10px
+  );
+  animation: gridmove 20s linear infinite;
+  transform: translateZ(-500px) scale(1.5);
+}
+
+@keyframes gridmove {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* --- Formulário futurista --- */
+form {
+  position: relative;
+  background: rgba(15, 15, 35, 0.8);
+  border: 2px solid rgba(0, 255, 255, 0.5);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6), inset 0 0 10px rgba(0, 255, 255, 0.3);
+  padding: 40px 60px;
+  width: 400px;
+  transform: rotateY(0deg) rotateX(0deg);
+  animation: float 6s ease-in-out infinite alternate;
+  z-index: 2;
+}
+
+@keyframes float {
+  0% { transform: rotateY(0deg) translateY(0); }
+  50% { transform: rotateY(5deg) translateY(-10px); }
+  100% { transform: rotateY(-5deg) translateY(10px); }
+}
+
+label {
+  display: block;
+  margin: 20px 0 5px;
+  color: #00ffff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px #00ffff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(0, 255, 255, 0.1);
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+  box-shadow: inset 0 0 5px rgba(0, 255, 255, 0.3);
+}
+
+input:focus {
+  background: rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 15px #00ffff;
+  transform: scale(1.02);
+}
+
+/* --- Botão de envio --- */
+button {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  padding: 12px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16px;
+  color: #0f0f0f;
+  background: linear-gradient(90deg, #00ffff, #0077ff);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: 0.4s;
+  box-shadow: 0 0 20px #00ffff;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #00ffaa, #00ffff);
+  transform: scale(1.1);
+  box-shadow: 0 0 40px #00ffff, 0 0 60px #0077ff inset;
+}
+
+/* --- Link estiloso --- */
+nav {
+  margin-top: 25px;
+  text-align: center;
+}
+
+nav a {
+  color: #00ffff;
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  text-shadow: 0 0 8px #00ffff;
+}
+
+nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
+  transform: scale(1.1);
+}
+
+/* --- Efeito de luz piscando --- */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* --- Responsividade --- */
+@media (max-width: 480px) {
+  form {
+    width: 85%;
+    padding: 25px 30px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  label, input {
+    font-size: 13px;
+  }
+}

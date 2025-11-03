@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;900&family=Poppins:wght@300;600&display=swap');
+
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: radial-gradient(circle at top, #060618, #01010a 80%);
+  color: #fff;
+  overflow: hidden;
+}
+
+/* --- Fundo animado --- */
+body::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0,255,255,0.05) 0,
+    rgba(0,255,255,0.05) 2px,
+    transparent 2px,
+    transparent 30px
+  );
+  animation: rotateGrid 60s linear infinite;
+  z-index: 0;
+}
+@keyframes rotateGrid {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* --- Caixa de mensagem --- */
+.message-box {
+  position: relative;
+  z-index: 1;
+  background: rgba(10, 20, 40, 0.8);
+  border: 2px solid rgba(0,255,255,0.4);
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0,255,255,0.4), inset 0 0 20px rgba(0,255,255,0.1);
+  padding: 40px 60px;
+  text-align: center;
+  animation: pop 0.8s ease-out;
+}
+@keyframes pop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* --- Mensagem de sucesso --- */
+.message-box h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 26px;
+  color: #00ffff;
+  text-shadow: 0 0 20px #00ffff, 0 0 50px #0077ff;
+  animation: pulse 2s infinite alternate;
+}
+@keyframes pulse {
+  from { text-shadow: 0 0 15px #00ffff; }
+  to { text-shadow: 0 0 40px #00ffff, 0 0 70px #0077ff; }
+}
+
+/* --- Link voltar --- */
+a {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 25px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  color: #000;
+  background: linear-gradient(90deg, #00ffff, #0077ff);
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 0 20px #00ffff;
+  transition: 0.3s;
+}
+
+a:hover {
+  background: linear-gradient(90deg, #00ffaa, #00ffff);
+  transform: scale(1.1);
+  box-shadow: 0 0 40px #00ffff, 0 0 70px #0077ff inset;
+}
+
+/* --- Mensagem de erro --- */
+.error {
+  color: #ff5e5e;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ff2b2b;
+}
