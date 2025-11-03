@@ -1,12 +1,17 @@
 <?php
 
-$conn = new mysqli("localhost", "root", "senaisp","livraria");
+echo "<link rel='stylesheet' href='update.css'>";
+
+
+$conn = new mysqli("localhost", "root", "senaisp","escola");
 
 $id = $_POST['id'];
 $nome = $_POST['nome'];
-$email = $_POST['email'];
+$endereco = $_POST['endereco'];
+$estado = $_POST['estado'];
+$cidade = $_POST['cidade'];
 
-$sql = "UPDATE usuarios SET nome = '$nome', email = '$email' WHERE id_usuario = $id";
+$sql = "UPDATE cliente SET nome = '$nome', endereco = '$endereco', estado = '$estado', cidade = '$cidade' WHERE id = $id";
 
 if ($conn->query($sql) === TRUE) {
     echo "Registro atualizado com sucesso.";
