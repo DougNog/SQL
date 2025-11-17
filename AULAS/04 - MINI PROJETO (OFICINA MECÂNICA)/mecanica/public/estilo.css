@@ -1,0 +1,21 @@
+/* public/estilo.css - estilo simples, responsivo */
+*{box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;background:#f5f7fb;margin:0;color:#111}
+header{background:#1a5276;color:#fff;padding:18px 12px;text-align:center}
+header h1{margin:0}
+nav{margin-top:10px}
+nav a{color:#fff;text-decoration:none;margin:0 8px;font-weight:600}
+main{padding:20px;max-width:1100px;margin:0 auto}
+.menu{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:18px 0}
+.botao{background:#1a5276;color:#fff;padding:12px 18px;border-radius:8px;text-decoration:none}
+form{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:12px;margin:12px 0;display:flex;flex-wrap:wrap;gap:8px}
+input[type=text],input[type=number],select{padding:10px;border:1px solid #d1d5db;border-radius:6px}
+button{background:#1a5276;color:#fff;border:none;padding:10px 14px;border-radius:6px;cursor:pointer}
+button.del{background:#922b21}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden;margin-top:10px}
+th,td{padding:10px;border-bottom:1px solid #eef2f6;text-align:left}
+th{background:#1a5276;color:#fff}
+@media(max-width:720px){
+  nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+  form{flex-direction:column}
+}
