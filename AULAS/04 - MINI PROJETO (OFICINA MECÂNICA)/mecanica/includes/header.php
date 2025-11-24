@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Oficina Mecânica</title>
+  <title>Oficina Simas Turbo</title>
   <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
